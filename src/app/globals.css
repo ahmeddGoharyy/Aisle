@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&display=swap");
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --color-primary: 183 110 121;          /* #B76E79 Dusty Rose */
+    --color-primary-light: 212 160 167;    /* #D4A0A7 */
+    --color-primary-dark: 139 79 88;       /* #8B4F58 */
+    --color-secondary: 44 62 80;           /* #2C3E50 Dark Slate */
+    --color-accent: 212 175 55;            /* #D4AF37 Gold */
+
+    /* Semantic */
+    --color-success: 16 185 129;
+    --color-warning: 245 158 11;
+    --color-error: 239 68 68;
+    --color-info: 59 130 246;
+
+    /* Surfaces */
+    --color-background: 255 255 255;
+    --color-surface: 249 250 251;
+    --color-border: 229 231 235;
+
+    /* Text */
+    --color-text-primary: 17 24 39;
+    --color-text-secondary: 107 114 128;
+    --color-text-muted: 156 163 175;
+
+    /* Wedding Theme Override (injected per-wedding) */
+    --wedding-accent: 183 110 121;
+    --wedding-accent-light: 212 160 167;
+    --wedding-accent-dark: 139 79 88;
+  }
+
+  .dark {
+    --color-background: 17 24 39;
+    --color-surface: 31 41 55;
+    --color-border: 55 65 81;
+    --color-text-primary: 243 244 246;
+    --color-text-secondary: 156 163 175;
+    --color-text-muted: 107 114 128;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    @apply bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-gray-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-sm font-medium text-white shadow-soft transition-all duration-200 hover:bg-brand-primary-dark hover:shadow-elevated focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-medium text-gray-700 shadow-sm transition-all duration-200 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 active:scale-[0.98] dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand-accent px-6 py-3 text-sm font-medium text-white shadow-soft transition-all duration-200 hover:brightness-110 hover:shadow-elevated focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 active:scale-[0.98];
+  }
+
+  .card {
+    @apply rounded-xl border border-gray-200 bg-white p-6 shadow-soft transition-shadow duration-200 hover:shadow-elevated dark:border-gray-700 dark:bg-gray-800;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition-colors duration-200 focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-500;
+  }
+
+  .section-heading {
+    @apply font-heading text-3xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 md:text-4xl;
+  }
+
+  .section-subheading {
+    @apply mt-2 text-lg text-gray-500 dark:text-gray-400;
+  }
+}
+
+@layer utilities {
+  .animate-stagger > * {
+    animation: fadeInUp 0.4s ease-out backwards;
+  }
+
+  .animate-stagger > *:nth-child(1) { animation-delay: 0ms; }
+  .animate-stagger > *:nth-child(2) { animation-delay: 80ms; }
+  .animate-stagger > *:nth-child(3) { animation-delay: 160ms; }
+  .animate-stagger > *:nth-child(4) { animation-delay: 240ms; }
+  .animate-stagger > *:nth-child(5) { animation-delay: 320ms; }
+  .animate-stagger > *:nth-child(6) { animation-delay: 400ms; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
