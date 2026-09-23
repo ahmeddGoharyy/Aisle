@@ -38,16 +38,7 @@ Aisle provides a **simple, elegant, all-in-one wedding platform** where:
 | Persona | Description | Pain Points Solved |
 |---|---|---|
 | **Engaged Couples** | Couples planning their wedding who want a digital presence | Unified wedding site, photo sharing, guest communication |
-| **Wedding Planners** | Professionals managing multiple weddings | Multi-wedding management, guest coordination, content moderation |
 | **Wedding Guests** | Attendees who want to participate in the celebration | One place for info, easy photo upload, digital guestbook |
-
-### Secondary Users
-
-| Persona | Description |
-|---|---|
-| **Photographers** | Professional photographers who can upload curated galleries |
-| **Venues** | Venues that want to offer digital wedding sites as a service |
-| **Event Coordinators** | Day-of coordinators managing logistics |
 
 ---
 
@@ -67,7 +58,8 @@ Aisle provides a **simple, elegant, all-in-one wedding platform** where:
 - 📍 **One link for everything** — venue, schedule, dress code, all in one place
 - 📷 **Easy photo sharing** — upload from your phone, no app download required
 - 💌 **Leave a message** — write a note the couple will treasure
-- ⚡ **Real-time** — see new photos and messages appear live during the event
+
+
 
 ### For the Platform (Business)
 

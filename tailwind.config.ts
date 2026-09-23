@@ -16,20 +16,23 @@ const config: Config = {
       },
       colors: {
         brand: {
-          primary: "#B76E79",
-          "primary-light": "#D4A0A7",
-          "primary-dark": "#8B4F58",
-          secondary: "#2C3E50",
+          primary: "#003152",
+          "primary-light": "#1a4a6e",
+          "primary-dark": "#001f36",
+          secondary: "#ADDFF1",
           accent: "#D4AF37",
+          light: "#ADDFF1",
+          dark: "#003152",
         },
       },
       boxShadow: {
         soft: "0 4px 6px rgba(0, 0, 0, 0.07)",
-        elevated: "0 10px 15px rgba(0, 0, 0, 0.1)",
+        elevated: "0 10px 25px rgba(0, 49, 82, 0.15)",
       },
       borderRadius: {
         xl: "1rem",
         "2xl": "1.5rem",
+        "3xl": "2rem",
       },
       keyframes: {
         fadeInUp: {
@@ -40,10 +43,15 @@ const config: Config = {
           from: { opacity: "0", transform: "translateX(20px)" },
           to: { opacity: "1", transform: "translateX(0)" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "fade-in-up": "fadeInUp 0.4s ease-out",
         "slide-in-right": "slideInRight 0.3s ease-out",
+        float: "float 3s ease-in-out infinite",
       },
     },
   },

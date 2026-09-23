@@ -6,11 +6,11 @@
 
 @layer base {
   :root {
-    /* Brand Colors */
-    --color-primary: 183 110 121;          /* #B76E79 Dusty Rose */
-    --color-primary-light: 212 160 167;    /* #D4A0A7 */
-    --color-primary-dark: 139 79 88;       /* #8B4F58 */
-    --color-secondary: 44 62 80;           /* #2C3E50 Dark Slate */
+    /* Brand Colors — Gabriella Soft Blue & Prestige Mauve */
+    --color-primary: 0 49 82;              /* #003152 Prestige Mauve (Navy) */
+    --color-primary-light: 26 74 110;      /* #1a4a6e */
+    --color-primary-dark: 0 31 54;         /* #001f36 */
+    --color-secondary: 173 223 241;        /* #ADDFF1 Gabriella Soft Blue */
     --color-accent: 212 175 55;            /* #D4AF37 Gold */
 
     /* Semantic */
@@ -25,20 +25,20 @@
     --color-border: 229 231 235;
 
     /* Text */
-    --color-text-primary: 17 24 39;
+    --color-text-primary: 0 49 82;
     --color-text-secondary: 107 114 128;
     --color-text-muted: 156 163 175;
 
     /* Wedding Theme Override (injected per-wedding) */
-    --wedding-accent: 183 110 121;
-    --wedding-accent-light: 212 160 167;
-    --wedding-accent-dark: 139 79 88;
+    --wedding-accent: 0 49 82;
+    --wedding-accent-light: 173 223 241;
+    --wedding-accent-dark: 0 31 54;
   }
 
   .dark {
-    --color-background: 17 24 39;
-    --color-surface: 31 41 55;
-    --color-border: 55 65 81;
+    --color-background: 0 31 54;
+    --color-surface: 0 49 82;
+    --color-border: 26 74 110;
     --color-text-primary: 243 244 246;
     --color-text-secondary: 156 163 175;
     --color-text-muted: 107 114 128;
@@ -80,7 +80,7 @@
   }
 
   .section-heading {
-    @apply font-heading text-3xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 md:text-4xl;
+    @apply font-heading text-3xl font-semibold tracking-tight text-brand-dark dark:text-gray-100 md:text-4xl;
   }
 
   .section-subheading {
